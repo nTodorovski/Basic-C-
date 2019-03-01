@@ -10,7 +10,7 @@ namespace Task_1
     {
 
 
-        static double RealCalculator(int num1, int num2, string operation)
+        public static double RealCalculator(int num1, int num2, string operation)
         {
             double result = 0;
 
@@ -36,7 +36,7 @@ namespace Task_1
         }
 
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.Write("Enter the First number: ");
             var firstInput = Console.ReadLine();
