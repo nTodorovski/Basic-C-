@@ -5,11 +5,10 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Task2
+namespace FizzBuzz
 {
     class Program
     {
-        
         static void Main(string[] args)
         {
             Console.WriteLine("Enter number");
@@ -24,19 +23,22 @@ namespace Task2
             {
                 for (int i = 1; i <= first; i++)
                 {
-                    if(i % 3 == 0 && i % 5 == 0)
+                    if (i % 3 == 0 && i % 5 == 0)
                     {
                         Console.Write("FizzBuzz ");
                         Thread.Sleep(100);
-                    }else if(i % 5 == 0)
+                    }
+                    else if (i % 5 == 0)
                     {
                         Console.Write("Buzz ");
                         Thread.Sleep(100);
-                    }else if(i % 3 == 0)
+                    }
+                    else if (i % 3 == 0)
                     {
                         Console.Write("Fizz ");
                         Thread.Sleep(100);
-                    }else
+                    }
+                    else
                     {
                         Console.Write($"{i} ");
                         Thread.Sleep(100);
