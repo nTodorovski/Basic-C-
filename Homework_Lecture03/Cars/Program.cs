@@ -44,7 +44,7 @@ namespace Cars
 
     class Program
     {
-        public static string RaceCars(Car one, Car two)
+        static string RaceCars(Car one, Car two)
         {
             if (one.CalculateSpeed(one.Driver) > two.CalculateSpeed(two.Driver))
             {
