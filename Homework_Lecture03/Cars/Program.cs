@@ -6,42 +6,6 @@ using System.Threading.Tasks;
 
 namespace Cars
 {
-    class Driver
-    {
-        public string Name { get; set; }
-        public int Skill { get; set; }
-
-        public Driver()
-        {
-
-        }
-
-        public Driver(string name,int skill)
-        {
-            Name = name;
-            Skill = skill;
-        }
-    }
-    
-    class Car
-    {
-        public string Model { get; set; }
-        public int Speed { get; set; }
-        public Driver Driver { get; set; }
-
-        public Car(string model,int speed)
-        {
-            Model = model;
-            Speed = speed;
-        }
-
-        public int CalculateSpeed(Driver Driver)
-        {
-            int speed = Driver.Skill * Speed;
-            return speed;
-        }
-    }
-
     class Program
     {
         static string RaceCars(Car one, Car two)
@@ -94,27 +58,31 @@ namespace Cars
                     Console.WriteLine("1) Porsche\n2) Ferrari\n3) Hyundai\n4) Mazda");
                     Console.Write("Choose a car no.1: ");
                     firstCarInput = int.TryParse(Console.ReadLine(), out firstCar);
-                    if (firstCarInput && (firstCar == 1 || firstCar == 2 || firstCar == 3 || firstCar == 4))
+                    if (firstCarInput)
                     {
-                        if(firstCar == 1)
+                        switch (firstCar)
                         {
-                            selectedFirstCar = porsche;
-                        }else if(firstCar == 2)
-                        {
-                            selectedFirstCar = ferrari;
-                        }else if(firstCar == 3)
-                        {
-                            selectedFirstCar = hyundai;
-                        }
-                        else
-                        {
-                            selectedFirstCar = mazda;
+                            case 1:
+                                selectedFirstCar = porsche;
+                                break;
+                            case 2:
+                                selectedFirstCar = ferrari;
+                                break;
+                            case 3:
+                                selectedFirstCar = hyundai;
+                                break;
+                            case 4:
+                                selectedFirstCar = mazda;
+                                break;
+                            default:
+                                Console.WriteLine("Please enter number from 1 to 4.");
+                                continue;
                         }
                         break;
                     }
                     else
                     {
-                        Console.WriteLine("Not a valid input for car no.1!");
+                        Console.WriteLine("Not a valid input.");
                     }
                 }
 
@@ -124,29 +92,32 @@ namespace Cars
                     Console.WriteLine("1) Bob\n2) Greg\n3) Jill\n4) Anne");
                     Console.Write("Choose Driver 1: ");
                     firstDriverInput = int.TryParse(Console.ReadLine(), out firstDriver);
-                    if (firstDriverInput && (firstDriver == 1 || firstDriver == 2 || firstDriver == 3 || firstDriver == 4))
+
+                    if (firstDriverInput)
                     {
-                        if (firstDriver == 1)
+                        switch (firstDriver)
                         {
-                            selectedFirstDriver = bob;
-                        }
-                        else if (firstDriver == 2)
-                        {
-                            selectedFirstDriver = greg;
-                        }
-                        else if (firstDriver == 3)
-                        {
-                            selectedFirstDriver = jill;
-                        }
-                        else
-                        {
-                            selectedFirstDriver = anne;
+                            case 1:
+                                selectedFirstDriver = bob;
+                                break;
+                            case 2:
+                                selectedFirstDriver = greg;
+                                break;
+                            case 3:
+                                selectedFirstDriver = jill;
+                                break;
+                            case 4:
+                                selectedFirstDriver = anne;
+                                break;
+                            default:
+                                Console.WriteLine("Please enter number from 1 to 4.");
+                                continue;
                         }
                         break;
                     }
                     else
                     {
-                        Console.WriteLine("Not a valid input for driver 1.");
+                        Console.WriteLine("Not a valid input.");
                     }
                 }
 
@@ -172,29 +143,31 @@ namespace Cars
                     Console.WriteLine("1) Porsche\n2) Ferrari\n3) Hyundai\n4) Mazda");
                     Console.Write("Choose a car no.2: ");
                     secondCarInput = int.TryParse(Console.ReadLine(), out secondCar);
-                    if (secondCarInput && (secondCar == 1 || secondCar == 2 || secondCar == 3 || secondCar == 4))
+                    if (secondCarInput)
                     {
-                        if (secondCar == 1)
+                        switch (secondCar)
                         {
-                            selectedSecondCar = porsche;
-                        }
-                        else if (secondCar == 2)
-                        {
-                            selectedSecondCar = ferrari;
-                        }
-                        else if (secondCar == 3)
-                        {
-                            selectedSecondCar = hyundai;
-                        }
-                        else
-                        {
-                            selectedSecondCar = mazda;
+                            case 1:
+                                selectedSecondCar = porsche;
+                                break;
+                            case 2:
+                                selectedSecondCar = ferrari;
+                                break;
+                            case 3:
+                                selectedSecondCar = hyundai;
+                                break;
+                            case 4:
+                                selectedSecondCar = mazda;
+                                break;
+                            default:
+                                Console.WriteLine("Please enter number from 1 to 4.");
+                                continue;
                         }
                         break;
                     }
                     else
                     {
-                        Console.WriteLine("Not a valid input for car no.2!");
+                        Console.WriteLine("Not a valid input.");
                     }
                 }
 
@@ -204,29 +177,31 @@ namespace Cars
                     Console.WriteLine("1) Bob\n2) Greg\n3) Jill\n4) Anne");
                     Console.Write("Choose Driver 2: ");
                     secondDriverInput = int.TryParse(Console.ReadLine(), out secondDriver);
-                    if (secondDriverInput && (secondDriver == 1 || secondDriver == 2 || secondDriver == 3 || secondDriver == 4))
+                    if (secondDriverInput)
                     {
-                        if (secondDriver == 1)
+                        switch (secondDriver)
                         {
-                            selectedSecondDriver = bob;
-                        }
-                        else if (secondDriver == 2)
-                        {
-                            selectedSecondDriver = greg;
-                        }
-                        else if (secondDriver == 3)
-                        {
-                            selectedSecondDriver = jill;
-                        }
-                        else
-                        {
-                            selectedSecondDriver = anne;
+                            case 1:
+                                selectedSecondDriver = bob;
+                                break;
+                            case 2:
+                                selectedSecondDriver = greg;
+                                break;
+                            case 3:
+                                selectedSecondDriver = jill;
+                                break;
+                            case 4:
+                                selectedSecondDriver = anne;
+                                break;
+                            default:
+                                Console.WriteLine("Please enter number from 1 to 4.");
+                                continue;
                         }
                         break;
                     }
                     else
                     {
-                        Console.WriteLine("Not a valid input for driver 2.");
+                        Console.WriteLine("Not a valid input.");
                     }
                 }
 
@@ -237,7 +212,7 @@ namespace Cars
                 Console.WriteLine(RaceCars(selectedFirstCar, selectedSecondCar));
 
                 Console.WriteLine("Do you want to Race Again? (Y/N)");
-                if (Console.ReadLine() == "N")
+                if (Console.ReadLine().ToLower() == "n")
                 {
                     break;
                 }
