@@ -4,27 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercise_1
+namespace NumberStats
 {
     class Program
     {
         static string NumberStats(double number)
         {
-            string evenOdd ="";
+            string evenOdd = "";
             string posNega = "";
             string decInt = "";
             if (number % 2 == 0)
             {
                 evenOdd = "Even";
-            }else
+            }
+            else
             {
                 evenOdd = "Odd";
             }
 
-            if(number > 0)
+            if (number > 0)
             {
                 posNega = "Positive";
-            }else if(number < 0)
+            }
+            else if (number < 0)
             {
                 posNega = "Negative";
             }
@@ -33,7 +35,7 @@ namespace Exercise_1
                 posNega = "Zero";
             }
 
-            if(number % 1 > 0)
+            if (number % 1 > 0)
             {
                 decInt = "Decimal";
             }
@@ -49,7 +51,7 @@ namespace Exercise_1
             while (true)
             {
                 Console.WriteLine("Enter Number:");
-                if (double.TryParse(Console.ReadLine(),out double number))
+                if (double.TryParse(Console.ReadLine(), out double number))
                 {
                     Console.WriteLine(NumberStats(number));
                 }

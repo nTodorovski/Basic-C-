@@ -4,20 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercise_2
+namespace Users
 {
     class Program
     {
-        static string LogIn(string username,string password, User[] users)
+        static string LogIn(string username, string password, User[] users)
         {
             foreach (User user in users)
             {
-                Console.WriteLine(user.Username);
-            }
-
-            foreach (User user in users)
-            {
-                if(user.Username == username && user.Password == password)
+                if (user.Username == username && user.Password == password)
                 {
                     string mesages = "";
                     foreach (string msg in user.Messages)
@@ -30,23 +25,18 @@ namespace Exercise_2
             return "User not found.";
         }
 
-        static string Register(string username,string password, ref User[] users)
+        static string Register(string username, string password, ref User[] users)
         {
             foreach (User user in users)
             {
-                if(user.Username == username)
+                if (user.Username == username)
                 {
                     return "There is already a user called like that.";
                 }
             }
 
-            Array.Resize(ref users, users.Length+1);
-            users[users.Length-1] = new User(username, password);
-
-            foreach (User user in users)
-            {
-                Console.WriteLine(user.Username);
-            }
+            Array.Resize(ref users, users.Length + 1);
+            users[users.Length - 1] = new User(username, password);
 
             string useri = "";
             foreach (User user in users)
@@ -59,8 +49,8 @@ namespace Exercise_2
         static void Main(string[] args)
         {
             User[] users = { new User("petko", "petko1"), new User("trajko", "trajko1"), new User("stanko", "stanko1") };
-            while (true) {
-               
+            while (true)
+            {
                 Console.WriteLine("Do you want to Log In or Register? \n1) Log In \n2) Register");
                 if (int.TryParse(Console.ReadLine(), out int input))
                 {
@@ -72,7 +62,7 @@ namespace Exercise_2
                     {
                         Console.WriteLine(LogIn(username, password, users));
                     }
-                    else if(input == 2)
+                    else if (input == 2)
                     {
                         Console.WriteLine(Register(username, password, ref users));
                     }
