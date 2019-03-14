@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3BC15A94-E9AF-4D09-A541-B3DA50AD3E44}</ProjectGuid>
+    <ProjectGuid>{AA73F637-E6D5-47BF-BADB-F043215A998B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Exercise_2</RootNamespace>
-    <AssemblyName>Exercise 2</AssemblyName>
+    <RootNamespace>NumberStats</RootNamespace>
+    <AssemblyName>NumberStats</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
