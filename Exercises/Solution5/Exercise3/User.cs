@@ -13,7 +13,7 @@ namespace Exercise3
         private string Pin { get; set; }
         private int Balance { get; set; }
 
-        public User(string name, long cardNumber,string pin,int balance = 0)
+        public User(string name, long cardNumber, string pin, int balance = 0)
         {
             Name = name;
             CardNumber = cardNumber;
