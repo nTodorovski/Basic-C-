@@ -8,7 +8,6 @@ namespace Academy
 {
     public class Admin : User
     {
-        public Role Role { get; set; }
 
         public Admin() { }
 

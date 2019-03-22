@@ -16,6 +16,12 @@ namespace Academy
         public Subject(string nameOfSubject)
         {
             NameOfSubject = nameOfSubject;
+            AttendingStudents = 0;
+        }
+
+        public void PrintInfo()
+        {
+            Console.WriteLine(NameOfSubject);
         }
     }
 }

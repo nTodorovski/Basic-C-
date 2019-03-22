@@ -12,6 +12,7 @@ namespace Academy
         public string LastName { get; set; }
         public string Username { get; set; }
         private string Password { get; set; }
+        public Role Role { get; set; }
 
         public User() { }
 

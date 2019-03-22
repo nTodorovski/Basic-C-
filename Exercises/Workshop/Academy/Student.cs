@@ -9,15 +9,15 @@ namespace Academy
     public class Student : User
     {
         public Subject CurrentSubject { get; set; }
-        public Dictionary<string,int> Grades { get; set; }
-        public Role Role { get; set; }
+        public Dictionary<Subject,double> Grades { get; set; }
 
         public Student(string firstName,string lastName,string username,string password):base(firstName,lastName,username,password)
         {
             Role = Role.Student;
             CurrentSubject = new Subject();
-            Grades = new Dictionary<string, int>();
+            Grades = new Dictionary<Subject, double>();
         }
+        public Student() { }
 
         public override void PrintInfo()
         {

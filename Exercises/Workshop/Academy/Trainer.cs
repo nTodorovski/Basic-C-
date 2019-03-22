@@ -8,12 +8,12 @@ namespace Academy
 {
     public class Trainer : User
     {
-        public Role Role { get; set; }
 
         public Trainer(string firstName,string lastName,string username,string password) : base(firstName,lastName,username,password)
         {
             Role = Role.Trainer;
         }
+        public Trainer() { }
 
         public override void PrintInfo()
         {
